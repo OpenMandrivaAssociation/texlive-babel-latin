@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-babel-latin
-Version:	20131013
-Release:	9
+Version:	3.5
+Release:	1
 Summary:	TeXLive babel-latin package
 Group:		Publishing
 URL:		http://tug.org/texlive
