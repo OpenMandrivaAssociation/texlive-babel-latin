@@ -1,19 +1,13 @@
-# revision 30280
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-babel-latin
-Version:	3.5
-Release:	2
+Version:	59800
+Release:	1
 Summary:	TeXLive babel-latin package
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.r59800.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.doc.r59800.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-latin.source.r59800.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,24 +17,24 @@ Requires(post):	texlive-kpathsea
 TeXLive babel-latin package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/babel-latin/latin.ldf
-%doc %{_texmfdistdir}/doc/generic/babel-latin/latin.pdf
+%{_texmfdistdir}/tex/generic/babel-latin
+%doc %{_texmfdistdir}/doc/generic/babel-latin
 #- source
-%doc %{_texmfdistdir}/source/generic/babel-latin/latin.dtx
-%doc %{_texmfdistdir}/source/generic/babel-latin/latin.ins
+%doc %{_texmfdistdir}/source/generic/babel-latin
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
