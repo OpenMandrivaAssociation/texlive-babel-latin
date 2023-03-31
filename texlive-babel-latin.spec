@@ -1,6 +1,6 @@
 Name:		texlive-babel-latin
 Version:	59800
-Release:	1
+Release:	2
 Summary:	TeXLive babel-latin package
 Group:		Publishing
 URL:		http://tug.org/texlive
